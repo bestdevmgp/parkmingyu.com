@@ -64,11 +64,14 @@ body.dark-mode {
     font-size: 30px;
     font-weight: 700;
 }
+.nameBox{
+    display: inline-block;
+}
 .head {
     font-family: "Pretendard";
     padding-bottom: 10px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     html {
         body.light-mode {
             background-color: #f5f5f5;
@@ -81,17 +84,31 @@ body.dark-mode {
     }
     .body {
         flex-direction: column;
+        padding: 7.5px;
     }
     .desc {
-        font-size: 19px;
+        font-size: 21px;
+        display: block;
     }
     .name {
-        font-size: 19px;
+        font-size: 21px;
+    }
+    .link{
+        width: 60px;
+        height: 60px;
     }
     .link:hover {
         opacity: 0.5;
         transform: scale(0.95);
     }
+    .image{
+        width: 60px;
+    }
+    .nameBox{
+        text-align: center;
+        display: block;
+    }
+
 }
 @media screen and (min-width: 601px) {
     .link:hover {
