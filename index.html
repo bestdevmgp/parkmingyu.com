@@ -15,6 +15,29 @@
 <script>
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     document.body.classList.add(isDarkMode ? 'dark-mode' : 'light-mode');
+
+    document.oncontextmenu = function() {
+        return false;
+    }
+
+    var omitFormTags = ["input", "textarea", "select"]
+    omitFormTags = omitFormTags.join("|")
+
+    function disableSelect(e) {
+        if (omitFormTags.indexOf(e.target.tagName.toLowerCase()) == -1)
+            return false
+    }
+
+    function reEnable() {
+        return true
+    }
+
+    if (typeof document.onselectstart != "undefined")
+        document.onselectstart = new Function("return false")
+    else {
+        document.onmousedown = disableSelect
+        document.onmouseup = reEnable
+    }
 </script>
 <div class="container">
     <div class="head">
@@ -92,5 +115,6 @@
         </div>
     </div>
 </div>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
 </body>
 </html>

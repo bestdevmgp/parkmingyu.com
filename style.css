@@ -82,6 +82,11 @@ body.dark-mode {
             color: #f5f5f5;
         }
     }
+    body{
+        -webkit-user-select: none !important;
+        -moz-user-select: -moz-none !important;
+        user-select: none !important;
+    }
     .body {
         flex-direction: column;
         padding: 7.5px;
