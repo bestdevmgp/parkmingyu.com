@@ -13,10 +13,10 @@ html {
 }
 body.light-mode {
     background-color: #f5f5f5;
-    color: #121212;
+    color: #111111;
 }
 body.dark-mode {
-    background-color: #121212;
+    background-color: #111111;
     color: #f5f5f5;
 }
 .link {
